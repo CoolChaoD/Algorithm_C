@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-//我来测试一下
+//12345
 void bubbleSort(vector<int> &num){
 	int len = num.size();
 
@@ -12,7 +12,7 @@ void bubbleSort(vector<int> &num){
 			if (num[j] > num[j + 1])
 			swap(num[j], num[j + 1]);
 		}
-		printf("第%d轮",(i + 1));
+		printf("碌脷%d脗脰",(i + 1));
 		for (vector<int>::iterator it = num.begin(); it != num.end(); it++) {
 			cout << *it<<" ";
 		}
