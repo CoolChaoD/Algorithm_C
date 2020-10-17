@@ -18,4 +18,10 @@ public:
 	void setLeft(HeroNode* left);
 	void setRight(HeroNode* right);
 
+	//打印节点
+	void printNode(HeroNode* node);
+	//定义三种遍历算法
+	//1.前序遍历
+	void preOrder();
+
 };
