@@ -7,6 +7,12 @@
     <Filter Include="Sort">
       <UniqueIdentifier>{bac0f19a-2e97-4cf3-abe6-3a0e03569b10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructure">
+      <UniqueIdentifier>{ee719b73-bdbc-4ef6-a80a-28f76c1df483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\BiTree">
+      <UniqueIdentifier>{11832d08-1c4e-4115-ad62-1a16541d9b23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -24,5 +30,13 @@
     <ClCompile Include="ShellSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
+    <ClCompile Include="BiTree.cpp">
+      <Filter>DataStructure\BiTree</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BiNode.h">
+      <Filter>DataStructure\BiTree</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
