@@ -33,6 +33,9 @@
     <ClCompile Include="BiTree.cpp">
       <Filter>DataStructure\BiTree</Filter>
     </ClCompile>
+    <ClCompile Include="BiNode.cpp">
+      <Filter>DataStructure\BiTree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
