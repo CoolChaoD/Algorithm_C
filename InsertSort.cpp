@@ -11,18 +11,18 @@ void printMethod(int* arr, int n) {
 }
 
 
-void insertSort(int *arr,int n) {
+void insertSort(int* arr, int n) {
 	for (int i = 1; i < n; i++) {
 
 		int insertValue = arr[i];
-		int insertIndex = i-1;
+		int insertIndex = i - 1;
 
-		while (insertIndex >= 0 && insertValue<arr[insertIndex]) {
+		while (insertIndex >= 0 && insertValue < arr[insertIndex]) {
 			arr[insertIndex + 1] = arr[insertIndex];
 			insertIndex--;
 		}
 		arr[insertIndex + 1] = insertValue;
-		cout << "µÚ" << i << "ÂÖ£º";
+		cout << "ï¿½ï¿½" << i << "ï¿½Ö£ï¿½";
 		printMethod(arr, 4);
 	}
 }
