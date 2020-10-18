@@ -18,7 +18,7 @@ public:
 	void setLeft(HeroNode* left);
 	void setRight(HeroNode* right);
 
-	//打印节点
+	//二叉树的遍历
 	void printNode(HeroNode* node);
 	//定义三种遍历算法
 	//1.前序遍历
@@ -27,5 +27,13 @@ public:
 	void infixOrder();
 	//3.后续遍历
 	void postOrder();
+
+	//二叉树的查找算法
+	//1.前序查找
+	HeroNode* preOrderSearch(int no);
+	//2.中序查找
+	HeroNode* infixOrderSearch(int no);
+	//3.后续查找
+	HeroNode* postOrderSearch(int no);
 
 };

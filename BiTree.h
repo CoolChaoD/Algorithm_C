@@ -13,4 +13,13 @@ public:
 	void infixOrder1();
 	//3.后序遍历
 	void postOrder1();
+
+
+	//三种查找算法
+	//1.前序查找
+	HeroNode* preOrderSearch(int no);
+	//2.中序查找
+	HeroNode* infixOrderSearch(int no);
+	//3.后续查找
+	HeroNode* postOrderSearch(int no);
 };

@@ -1,5 +1,6 @@
 #include "BiTree.h"
 
+
 int main() {
 
 
@@ -23,12 +24,21 @@ int main() {
 	node3->setRight(node4);
 	node3->setLeft(node5);
 	bitree->setRoot(root);
-	cout << "前序遍历" << endl;
-	bitree->preOrder1();
-	cout << "中序遍历" << endl;
-	bitree->infixOrder1();
-	cout << "后序遍历" << endl;
-	bitree->postOrder1();
+	//测试代码
+
+	//cout << "前序遍历" << endl;
+	//bitree->preOrder1();
+	//cout << "中序遍历" << endl;
+	//bitree->infixOrder1();
+	//cout << "后序遍历" << endl;
+	//bitree->postOrder1();
+
+	HeroNode* resNode;
+	resNode = bitree->postOrderSearch(3);
+	cout << "no:" << resNode->getNo() << "name:" << resNode->getName() << endl;
+	//前序查找3次，中序查找4次，后序查找4次
+
+
 	return 1;
 }
 
