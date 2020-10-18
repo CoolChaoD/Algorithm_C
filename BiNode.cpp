@@ -45,3 +45,35 @@ void HeroNode::preOrder() {
 		this->right->preOrder();
 	}
 }
+
+//2.中序遍历
+//顺序：左子节点->父节点->右子节点
+void HeroNode::infixOrder() {
+	//1.先判断左子树是否为空，若不为空，则进去递归遍历
+	if (this->left != nullptr) {
+		this->left->infixOrder();//递归向左子树进行递归遍历
+	}
+
+	//2.输出父节点
+	printNode(this);//打印当前指针
+
+	//3.最后判断右子树是否为空，若不为空，则进去进行递归遍历
+	if (this->right != nullptr) {
+		this->right->infixOrder();
+	}
+}
+
+//3.后序遍历
+void HeroNode::postOrder() {
+	//1.先判断左子树是否为空，若不为空，则递归向左遍历
+	if (this->left != nullptr) {
+		this->left->postOrder();
+	}
+	//2.判断右子树是否为空，若不为空，则递归向右遍历
+	if (this->right != nullptr) {
+		this->right->postOrder();
+	}
+
+	//3.输出当前节点
+	printNode(this);
+}

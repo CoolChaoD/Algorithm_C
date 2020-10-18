@@ -23,5 +23,9 @@ public:
 	//定义三种遍历算法
 	//1.前序遍历
 	void preOrder();
+	//2.中序遍历
+	void infixOrder();
+	//3.后续遍历
+	void postOrder();
 
 };
