@@ -7,8 +7,8 @@ class HeroNode {
 private:
 	int no;      //节点的编号
 	string name;  //节点存放的数值
-	HeroNode* left; //指向左子节点的指针
-	HeroNode* right; //指向右子节点的指针
+	HeroNode* left = nullptr; //指向左子节点的指针
+	HeroNode* right = nullptr; //指向右子节点的指针
 public:
 	//1.构造函数
 	HeroNode(int no, string name);

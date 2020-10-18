@@ -18,7 +18,7 @@ int main() {
 	node3->setLeft(node5);
 	bitree->setRoot(root);
 	cout << "Ç°Ðò±éÀú" << endl;
-	bitree->preOrder();
+	bitree->preOrder1();
 
 
 

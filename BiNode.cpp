@@ -21,8 +21,9 @@ void HeroNode::setLeft(HeroNode* left) {
 }
 
 void HeroNode::setRight(HeroNode* right) {
-	this->left = right;
+	this->right = right;
 }
+
 //打印节点
 void HeroNode::printNode(HeroNode* node) {
 	cout << "no:" << node->getNo() << "  name:" << node->getName() << endl;
@@ -34,13 +35,13 @@ void HeroNode::preOrder() {
 	//首先输出父节点
 	printNode(this);
 	//递归向左子树遍历
-	if (this->left != NULL) {
-		cout << "left" << endl;
+	if (this->left != nullptr) {
+		//cout << "进入左子树" << endl;
 		this->left->preOrder();
 	}
+
 	//递归向右子树遍历
-	if (this->right != NULL) {
+	if (this->right != nullptr) {
 		this->right->preOrder();
 	}
-
 }
