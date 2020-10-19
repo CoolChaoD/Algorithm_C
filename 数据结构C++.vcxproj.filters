@@ -13,6 +13,9 @@
     <Filter Include="DataStructure\BiTree">
       <UniqueIdentifier>{11832d08-1c4e-4115-ad62-1a16541d9b23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySort">
+      <UniqueIdentifier>{e60225c0-d7cf-4776-895b-4f80c3ebb0b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>DataStructure\BiTree</Filter>
+    </ClCompile>
+    <ClCompile Include="myBubbleSort.cpp">
+      <Filter>MySort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
