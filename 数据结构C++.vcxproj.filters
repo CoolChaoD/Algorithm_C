@@ -16,6 +16,9 @@
     <Filter Include="MySort">
       <UniqueIdentifier>{e60225c0-d7cf-4776-895b-4f80c3ebb0b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructure\BiTree\threadedbitree">
+      <UniqueIdentifier>{d26d1822-b5d4-4c19-b916-967f95774a2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -52,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="BiTree.h">
       <Filter>DataStructure\BiTree</Filter>
+    </ClInclude>
+    <ClInclude Include="HeroNode.h">
+      <Filter>DataStructure\BiTree\threadedbitree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
