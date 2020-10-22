@@ -137,12 +137,13 @@ public:
 		if (node == nullptr) {
 			return;
 		}
-		//处理中间节点
+		//处理父节点
+		//处理左边
 		if (node->left == nullptr) {
 			node->setLeft(pre);
 			node->setLeftType(1);
 		}
-		//处理右节点
+		//处理右边
 		if (pre != nullptr && pre->right == nullptr) {
 			pre->setRight(node);
 			pre->setRightType(1);
@@ -213,15 +214,14 @@ int main() {
 
 
 	//二叉树遍历测试
-	cout << "前序遍历" << endl;
-	bitree->preOrder1();
+	//cout << "前序遍历" << endl;
+	//bitree->preOrder1();
 	//cout << "中序遍历" << endl;
 	//bitree->infixOrder1();
 	//cout << "后序遍历" << endl;
 	//bitree->postOrder1();
-
 	//二叉树的线索化测试
-	bitree->preThreaded(root);
+	bitree->infixThreaded(root);
 
 	ThrNode<string>* test = node3->left;
 	if (test == nullptr) {
