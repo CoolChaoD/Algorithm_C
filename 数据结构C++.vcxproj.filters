@@ -57,6 +57,9 @@
     <ClCompile Include="ThreadedTree.cpp">
       <Filter>DataStructure\BiTree\threadedbitreebook</Filter>
     </ClCompile>
+    <ClCompile Include="quickSort.cpp">
+      <Filter>Sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
