@@ -25,6 +25,9 @@
     <Filter Include="DataStructure\BiTree\threadedbitreebook">
       <UniqueIdentifier>{c903d0c0-8e78-4076-ae99-79e802a470fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySort\交换排序">
+      <UniqueIdentifier>{75838280-9683-4c1b-84d4-dc20a76c84ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -42,9 +45,6 @@
     <ClCompile Include="ShellSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="myBubbleSort.cpp">
-      <Filter>MySort</Filter>
-    </ClCompile>
     <ClCompile Include="BiNode.cpp">
       <Filter>DataStructure\BiTree\binarytree</Filter>
     </ClCompile>
@@ -60,11 +60,17 @@
     <ClCompile Include="quickSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="myQuickSort.cpp">
-      <Filter>MySort</Filter>
+    <ClCompile Include="myBubbleSort.cpp">
+      <Filter>MySort\交换排序</Filter>
     </ClCompile>
     <ClCompile Include="myBubbleSortSecond.cpp">
-      <Filter>MySort</Filter>
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="myQuickSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="myQuickSortSecond.cpp">
+      <Filter>MySort\交换排序</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
