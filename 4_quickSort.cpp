@@ -5,6 +5,7 @@
 using namespace std;
 
 
+
 void quickSort(int left, int right, vector<int>& arr) {
 	if (left >= right) {
 		return;
