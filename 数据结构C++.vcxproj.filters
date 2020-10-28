@@ -60,16 +60,22 @@
     <ClCompile Include="quickSort.cpp">
       <Filter>Sort</Filter>
     </ClCompile>
-    <ClCompile Include="myBubbleSort.cpp">
+    <ClCompile Include="3_BubbleSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
-    <ClCompile Include="myBubbleSortSecond.cpp">
+    <ClCompile Include="3_quickSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
-    <ClCompile Include="myQuickSort.cpp">
+    <ClCompile Include="1_BubbleSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
-    <ClCompile Include="myQuickSortSecond.cpp">
+    <ClCompile Include="2_BubbleSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="1_QuickSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="2_QuickSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
   </ItemGroup>

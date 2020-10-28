@@ -9,26 +9,17 @@
 using namespace std;
 
 void quickSort(int left, int right, vector<int>& arr) {
-
 	if (left >= right) {
 
 		return;
 	}
-
-
 	int i, j, base;
 	i = left;
 	j = right;
 
 	//取最左边的数作为基准数
 	base = arr[left];
-
-
-
-
 	while (i < j) {
-
-
 		//取最左边的数作为基准数，那么就从右边开始遍历,右边得数要大于base
 		while (i < j && arr[j] >= base) {
 			j--;
@@ -37,12 +28,10 @@ void quickSort(int left, int right, vector<int>& arr) {
 		while (i < j && arr[i] <= base) {
 			i++;
 		}
-
 		if (i < j) {
 			swap(arr[i], arr[j]);
 		}
 	}
-
 	//基准数归位置
 	arr[left] = arr[i];
 	arr[i] = base;
