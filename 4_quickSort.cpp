@@ -43,6 +43,5 @@ int main() {
 		cout << *it << " ";
 	}
 	return 1;
-	//test
 }
 
