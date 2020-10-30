@@ -153,6 +153,7 @@
     <ClCompile Include="4_quickSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="5_BubbleSort.cpp" />
     <ClCompile Include="BiNode.cpp" />
     <ClCompile Include="BiTree.cpp" />
     <ClCompile Include="BubbleSort.cpp">

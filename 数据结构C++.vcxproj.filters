@@ -84,6 +84,9 @@
     <ClCompile Include="4_quickSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
+    <ClCompile Include="5_BubbleSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
