@@ -10,26 +10,32 @@
     <Filter Include="DataStructure">
       <UniqueIdentifier>{ee719b73-bdbc-4ef6-a80a-28f76c1df483}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DataStructure\BiTree">
-      <UniqueIdentifier>{11832d08-1c4e-4115-ad62-1a16541d9b23}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MySort">
       <UniqueIdentifier>{e60225c0-d7cf-4776-895b-4f80c3ebb0b9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DataStructure\BiTree\threadedbitree">
-      <UniqueIdentifier>{d26d1822-b5d4-4c19-b916-967f95774a2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DataStructure\BiTree\binarytree">
-      <UniqueIdentifier>{71b57212-74e8-4caa-900a-da686b1f099e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DataStructure\BiTree\threadedbitreebook">
-      <UniqueIdentifier>{c903d0c0-8e78-4076-ae99-79e802a470fb}</UniqueIdentifier>
     </Filter>
     <Filter Include="MySort\交换排序">
       <UniqueIdentifier>{75838280-9683-4c1b-84d4-dc20a76c84ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DataStructure\BiTree2">
+    <Filter Include="DataStructure\temp">
+      <UniqueIdentifier>{fa3267a1-5458-404e-94e7-eabe1bf597d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\temp\BiTree2">
       <UniqueIdentifier>{342052d7-a755-4ea3-88c6-23bcdde42abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\temp\BiTree2\BiTree">
+      <UniqueIdentifier>{11832d08-1c4e-4115-ad62-1a16541d9b23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\temp\BiTree2\BiTree\threadedbitree">
+      <UniqueIdentifier>{d26d1822-b5d4-4c19-b916-967f95774a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\temp\BiTree2\BiTree\binarytree">
+      <UniqueIdentifier>{71b57212-74e8-4caa-900a-da686b1f099e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\temp\BiTree2\BiTree\threadedbitreebook">
+      <UniqueIdentifier>{c903d0c0-8e78-4076-ae99-79e802a470fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\BiTree">
+      <UniqueIdentifier>{ed0bd2d9-794a-4530-91a6-a49c7eb7757f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -49,16 +55,16 @@
       <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="BiNode.cpp">
-      <Filter>DataStructure\BiTree\binarytree</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
     </ClCompile>
     <ClCompile Include="BiTree.cpp">
-      <Filter>DataStructure\BiTree\binarytree</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>DataStructure\BiTree\binarytree</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
     </ClCompile>
     <ClCompile Include="ThreadedTree.cpp">
-      <Filter>DataStructure\BiTree\threadedbitreebook</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\threadedbitreebook</Filter>
     </ClCompile>
     <ClCompile Include="quickSort.cpp">
       <Filter>Sort</Filter>
@@ -94,15 +100,18 @@
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
     <ClCompile Include="bitree2.cpp">
-      <Filter>DataStructure\BiTree2</Filter>
+      <Filter>DataStructure\temp\BiTree2</Filter>
+    </ClCompile>
+    <ClCompile Include="binarytree.cpp">
+      <Filter>DataStructure\BiTree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
-      <Filter>DataStructure\BiTree\binarytree</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
     </ClInclude>
     <ClInclude Include="BiTree.h">
-      <Filter>DataStructure\BiTree\binarytree</Filter>
+      <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
