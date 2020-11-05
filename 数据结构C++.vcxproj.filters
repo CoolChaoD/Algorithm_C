@@ -28,6 +28,9 @@
     <Filter Include="MySort\交换排序">
       <UniqueIdentifier>{75838280-9683-4c1b-84d4-dc20a76c84ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructure\BiTree2">
+      <UniqueIdentifier>{342052d7-a755-4ea3-88c6-23bcdde42abe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -89,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="5_quickSort.cpp">
       <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="bitree2.cpp">
+      <Filter>DataStructure\BiTree2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

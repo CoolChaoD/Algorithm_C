@@ -156,9 +156,12 @@
     <ClCompile Include="5_BubbleSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="5_quickSort.cpp" />
+    <ClCompile Include="5_quickSort.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BiNode.cpp" />
     <ClCompile Include="BiTree.cpp" />
+    <ClCompile Include="bitree2.cpp" />
     <ClCompile Include="BubbleSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
