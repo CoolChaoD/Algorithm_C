@@ -105,6 +105,12 @@
     <ClCompile Include="binarytree.cpp">
       <Filter>DataStructure\BiTree</Filter>
     </ClCompile>
+    <ClCompile Include="6_BubbleSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
+    <ClCompile Include="6_quickSort.cpp">
+      <Filter>MySort\交换排序</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
