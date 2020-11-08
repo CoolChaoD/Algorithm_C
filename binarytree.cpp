@@ -32,6 +32,7 @@ public:
 		postOrder(root);
 	}
 
+	void LevelOrder();
 
 private:
 	//指向根节点的头指针
@@ -49,8 +50,8 @@ private:
 	void inOrder(BiNode<T>* bt);
 	//3.后序遍历
 	void postOrder(BiNode<T>* bt);
-	//4.层序遍历二叉树
-	void LevelOrder();
+
+
 
 };
 
@@ -131,6 +132,29 @@ void BiTree<T>::postOrder(BiNode<T>* bt) {
 	}
 }
 
+//4.层序遍历
+//层序遍历按照顺序进行输出，采用队列先进先出
+template<class T>
+void BiTree<T>::LevelOrder() {
+	BiNode<T>* Q[20];
+	BiNode<T>* q;
+	int front = -1;
+	int rear = -1;
+	if (root == NULL) { //如果二叉树为空，那么则返回
+		return;
+	}
+	Q[++rear] = root; //根指针入队
+	while (front != rear) {
+		q = Q[++front];   //出队
+		cout << q->data << " ";
+		if (q->lchild != NULL) Q[++rear] = q->lchild;
+		if (q->rchild != NULL) Q[++rear] = q->rchild;
+	}
+}
+
+
+
+
 
 int main() {
 
@@ -142,7 +166,8 @@ int main() {
 	bitree->InOrder();
 	cout << endl << "后序遍历" << endl;
 	bitree->PostOrder();
-
+	cout << endl << "层序遍历" << endl;
+	bitree->LevelOrder();
 	return 0;
 }
 
