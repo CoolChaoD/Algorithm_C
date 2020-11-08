@@ -23,8 +23,16 @@ public:
 		root = Creat(root);
 	}
 	void PreOrder() {
-		PreOrder(root);
+		preOrder(root);
 	}
+	void InOrder() {
+		inOrder(root);
+	}
+	void PostOrder() {
+		postOrder(root);
+	}
+
+
 private:
 	//指向根节点的头指针
 	BiNode<T>* root;
@@ -33,13 +41,14 @@ private:
 	//析构函数的调用
 	void Release(BiNode<T>* bt);
 
+
 	//二叉树的遍历
 	//1.前序遍历
-	void PreOrder(BiNode<T>* bt);
+	void preOrder(BiNode<T>* bt);
 	//2.中序遍历
-	void InOrder(BiNode<T>* bt);
+	void inOrder(BiNode<T>* bt);
 	//3.后序遍历
-	void PostOrder(BiNode<T>* bt);
+	void postOrder(BiNode<T>* bt);
 	//4.层序遍历二叉树
 	void LevelOrder();
 
@@ -50,14 +59,18 @@ private:
 template<class T>
 BiNode<T>* BiTree<T>::Creat(BiNode<T>* bt) {
 	char ch;
+	cout << "Input:" << endl;
 	cin >> ch;
 	if (ch == '#') {
 		bt = NULL; //创建一棵空树
 	}
 	else {
 		//生成一个节点，数据域为ch
+
 		bt = new BiNode<T>(ch);
+
 		bt->lchild = Creat(bt->lchild);//递归建立左子树
+
 		bt->rchild = Creat(bt->rchild);//递归创建右子树
 	}
 	return bt;
@@ -79,26 +92,56 @@ void BiTree<T>::Release(BiNode<T>* bt) {
 //二叉树的遍历
 //1.前序遍历(父节点->左子节点->右子节点)
 template <class T>
-void BiTree<T>::PreOrder(BiNode<T>* bt) {
+void BiTree<T>::preOrder(BiNode<T>* bt) {
 	if (bt == NULL) {
 		return;  //递归结束的条件
 	}
 	else {
-		cout << bt->data; //先访问根节点
-		PreOrder(bt->lchild);//前序递归bt的左子树
-		PreOrder(bt->rchild);//前序遍历bt的右子树
+		cout << bt->data << " "; //先访问根节点
+		preOrder(bt->lchild);//前序递归bt的左子树
+		preOrder(bt->rchild);//前序遍历bt的右子树
 	}
+
+}
+//2.中序遍历(左子节点->父节点->右子节点)
+template <class T>
+void BiTree<T>::inOrder(BiNode<T>* bt) {
+	if (bt == NULL) {
+		return;     //递归结束的条件
+	}
+	else {
+		inOrder(bt->lchild);//中序递归遍历左子树
+		cout << bt->data << " ";   //输出中间节点的数据
+		inOrder(bt->rchild);//中序递归遍历右子树
+	}
+
 }
 
+//3.后序遍历
+//后序遍历的顺序(左子节点->右子节点->中间节点)
+template<class T>
+void BiTree<T>::postOrder(BiNode<T>* bt) {
+	if (bt == NULL) {
+		return;    //递归的结束条件
+	}
+	else {
+		postOrder(bt->lchild);//后序遍历左子树
+		postOrder(bt->rchild);//后序遍历右子树
+		cout << bt->data << " ";//输出中间节点的数据
+	}
+}
 
 
 int main() {
 
 	BiTree<char>* bitree = new BiTree<char>;
 
-
+	cout << "前序遍历" << endl;
 	bitree->PreOrder();
-
+	cout << endl << "中序遍历" << endl;
+	bitree->InOrder();
+	cout << endl << "后序遍历" << endl;
+	bitree->PostOrder();
 
 	return 0;
 }
