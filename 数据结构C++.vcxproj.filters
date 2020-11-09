@@ -37,6 +37,12 @@
     <Filter Include="DataStructure\BiTree">
       <UniqueIdentifier>{ed0bd2d9-794a-4530-91a6-a49c7eb7757f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructure\练习">
+      <UniqueIdentifier>{c96d17e0-8806-4b92-9d6c-68bfab5225ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure\练习\01练习二叉树的遍历">
+      <UniqueIdentifier>{2d9398b3-5d31-4ecd-a925-e6b7edb91693}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -118,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="BiTree.h">
       <Filter>DataStructure\temp\BiTree2\BiTree\binarytree</Filter>
+    </ClInclude>
+    <ClInclude Include="01BiTree.hpp">
+      <Filter>DataStructure\练习\01练习二叉树的遍历</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
