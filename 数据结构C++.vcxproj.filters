@@ -117,6 +117,9 @@
     <ClCompile Include="6_quickSort.cpp">
       <Filter>MySort\交换排序</Filter>
     </ClCompile>
+    <ClCompile Include="mian_01BiTree.cpp">
+      <Filter>DataStructure\练习\01练习二叉树的遍历</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BiNode.h">
