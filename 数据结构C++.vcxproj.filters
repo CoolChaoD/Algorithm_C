@@ -46,6 +46,9 @@
     <Filter Include="MySort\选择排序">
       <UniqueIdentifier>{c3160fe1-875b-47e6-afff-2979f11cbeb4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructure\练习\02练习二叉树的遍历">
+      <UniqueIdentifier>{fcc74504-e615-440a-a4f7-dd3dadd38552}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -122,6 +125,12 @@
     </ClCompile>
     <ClCompile Include="selectSort.cpp">
       <Filter>Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="02BiTree.hpp">
+      <Filter>DataStructure\练习\02练习二叉树的遍历</Filter>
+    </ClCompile>
+    <ClCompile Include="02main_BiTree.cpp">
+      <Filter>DataStructure\练习\02练习二叉树的遍历</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
