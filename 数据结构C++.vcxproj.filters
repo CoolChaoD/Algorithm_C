@@ -43,6 +43,9 @@
     <Filter Include="DataStructure\练习\01练习二叉树的遍历">
       <UniqueIdentifier>{2d9398b3-5d31-4ecd-a925-e6b7edb91693}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySort\选择排序">
+      <UniqueIdentifier>{c3160fe1-875b-47e6-afff-2979f11cbeb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp">
@@ -50,9 +53,6 @@
     </ClCompile>
     <ClCompile Include="spasearray.cpp">
       <Filter>SpaseArray</Filter>
-    </ClCompile>
-    <ClCompile Include="SelectSort.cpp">
-      <Filter>Sort</Filter>
     </ClCompile>
     <ClCompile Include="InsertSort.cpp">
       <Filter>Sort</Filter>
@@ -119,6 +119,9 @@
     </ClCompile>
     <ClCompile Include="mian_01BiTree.cpp">
       <Filter>DataStructure\练习\01练习二叉树的遍历</Filter>
+    </ClCompile>
+    <ClCompile Include="selectSort.cpp">
+      <Filter>Sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

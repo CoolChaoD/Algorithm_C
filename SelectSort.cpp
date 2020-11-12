@@ -1,95 +1,42 @@
-//选择排序
+/*
+  选择排序
+*/
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
 
-void printMethod(int* a) {
-	for (int i = 0; i < 4; i++) {
-		cout << a[i] << " ";
+
+
+void selectSort(vector<int>& arr) {
+	//选择排序双层循环
+	for (int i = 0; i < arr.size() - 1; i++) {
+		int minIndex = i; //将序列的第一个作为最小的标签
+		for (int j = i + 1; j < arr.size(); j++) {
+			if (arr[j] < arr[minIndex])
+				minIndex = j;   //将最小值的下标更换为已经找到的下标
+		}
+		if (minIndex != i) {
+
+			swap(arr[i], arr[minIndex]);
+		}
+	}
+	cout << "after sort" << endl;
+	for (vector<int>::iterator it = arr.begin(); it != arr.end(); it++) {
+		cout << *it << " ";
 	}
 	cout << endl;
 }
-void selectSort(int* a) {
-	for (int i = 0; i < 3; i++) {
-		int minIdex = i;
-		int min = a[minIdex];
-		for (int j = i + 1; j < 4; j++) {
-			if (min > a [j]) {
-				minIdex = j;
-				min = a[j];
-			}
-		}
-		if (minIdex != i) {
-			a[minIdex] = a[i];
-			a[i] = min;
-		}
-		printMethod(a);
+
+
+int main() {
+	vector<int> arr = { 2,4,3,-2,10,9 };
+	cout << "before sort：" << endl;
+	for (vector<int>::iterator it = arr.begin(); it != arr.end(); it++) {
+		cout << *it << " ";
 	}
-}
-
-
-
-int  main() { 
-
-	int a[] = { 3,4,2,1 }; //原始数组
-	selectSort(a);
-
+	cout << endl;
+	selectSort(arr);
 	return 0;
-
-
-
-
-
-	////第一轮
-	//int minIdex = 0;
-	//int min = a[0];
-	//for (int j = 0+1; j < 4; j++) {
-	//	if (min > a[j]){
-	//		minIdex = j;
-	//		min = a[j];
-	//	}
-
-	//}
-	//if (minIdex != 0) {
-	//	a[minIdex] = a[0];
-	//	a[0] = min;
-	//
-	//}
-	//printMethod(a);
-
-	////第二轮
-	//minIdex = 1;
-	//min = a[1];
-	//for (int j = 1 + 1; j < 4; j++) {
-	//	if (min > a[j]) {
-	//		minIdex = j;
-	//		min = a[j];
-	//	}
-
-	//}
-	//if (minIdex != 1) {
-	//	a[minIdex] = a[1];
-	//	a[1] = min;
-
-	//}
-	//printMethod(a);
-
-	////第三轮
-	//minIdex = 2;
-	//min = a[2];
-	//for (int j = 3 + 1; j < 4; j++) {
-	//	if (min > a[j]) {
-	//		minIdex = j;
-	//		min = a[j];
-	//	}
-
-	//}
-	//if (minIdex != 3) {
-	//	a[minIdex] = a[3];
-	//	a[3] = min;
-
-	//}
-	//printMethod(a);
-
-	
-
 }
