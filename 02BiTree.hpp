@@ -1,16 +1,15 @@
 #include <iostream>
-#include <queue>
+
 using namespace std;
 
-template<class T>
+template <class T>
 struct BiNode {
 	T data;
-	BiNode* lchild;
-	BiNode* rchild;
-	BiNode(T data) {
-		this->data = data;
-		this->lchild = NULL;
-		this->rchild = NULL;
+	BiNode<T>* lchild, * rchild;
+	BiNode(T x) {
+		data = x;
+		lchild = NULL;
+		rchild = NULL;
 	}
 };
 
@@ -18,142 +17,132 @@ template <class T>
 class BiTree {
 public:
 	BiTree() {
-		root = creat(root);
+		root = Creat(root);
 	}
-	//二叉树的遍历
-	// 1.前序遍历
 	void PreOrder() {
-		PreOrder(root);
-		cout << endl;
+		preOrder(root);
 	}
-	// 2.中序遍历
-	void InfixOrder() {
-		InfixOrder(root);
-		cout << endl;
+	void InOrder() {
+		inOrder(root);
 	}
-	//3.后序遍历
 	void PostOrder() {
-		PostOrder(root);
-		cout << endl;
+		postOrder(root);
 	}
-	//4.层序遍历
-	void LevelOrder() {
-		LevelOrder(root);
-		cout << endl;
-	}
+
+	void LevelOrder();
+
 private:
+	//指向根节点的头指针
 	BiNode<T>* root;
-	//二叉树的创建
-	BiNode<T>* creat(BiNode<T>* bt);
-	//二叉树的析构
-	void release(BiNode<T>* bt);
+	//构造函数调用，创建一棵二叉树
+	BiNode<T>* Creat(BiNode<T>* bt);
+	//析构函数的调用
+	void Release(BiNode<T>* bt);
+
 
 	//二叉树的遍历
 	//1.前序遍历
-	void PreOrder(BiNode<T>* bt);
+	void preOrder(BiNode<T>* bt);
 	//2.中序遍历
-	void InfixOrder(BiNode<T>* bt);
+	void inOrder(BiNode<T>* bt);
 	//3.后序遍历
-	void PostOrder(BiNode<T>* bt);
-	//4.层序遍历
-	void LevelOrder(BiNode<T>* bt);
+	void postOrder(BiNode<T>* bt);
+
 };
 
-//二叉树的创建
-template <class T>
-BiNode<T>* BiTree<T>::creat(BiNode<T>* bt) {
+
+//构造函数创建递归一棵二叉树
+template<class T>
+BiNode<T>* BiTree<T>::Creat(BiNode<T>* bt) {
 	char ch;
-	cout << "请输入节点的值" << endl;
+	cout << "Input:" << endl;
 	cin >> ch;
 	if (ch == '#') {
-		bt = NULL; //创建一颗空树
+		bt = NULL; //创建一棵空树
 	}
 	else {
+		//生成一个节点，数据域为ch
+
 		bt = new BiNode<T>(ch);
-		bt->lchild = creat(bt->lchild);
-		bt->rchild = creat(bt->rchild);
+
+		bt->lchild = Creat(bt->lchild);//递归建立左子树
+
+		bt->rchild = Creat(bt->rchild);//递归创建右子树
 	}
 	return bt;
 }
 
-
-//二叉树的析构
+//析构函数，释放二叉树
 template <class T>
-void BiTree<T>::release(BiNode<T>* bt) {
-	if (bt == NULL) {
-		return;
-	}
-	else {
+void BiTree<T>::Release(BiNode<T>* bt) {
+	if (bt != NULL) {
 		//释放左子树
-		release(bt->lchild);
+		Release(bt->lchild);
 		//释放右子树
-		release(bt->rchild);
-		//删除节点
+		Release(bt->rchild);
+		//释放根节点，根节点要在最后释放
 		delete bt;
-		bt = NULL;
 	}
 }
-
 
 //二叉树的遍历
-//1.前序遍历
+//1.前序遍历(父节点->左子节点->右子节点)
 template <class T>
-void BiTree<T>::PreOrder(BiNode<T>* bt) {
+void BiTree<T>::preOrder(BiNode<T>* bt) {
 	if (bt == NULL) {
-		return;   //递归结束的条件
+		return;  //递归结束的条件
 	}
 	else {
-		cout << bt->data << " ";
-		PreOrder(bt->lchild);
-		PreOrder(bt->rchild);
+		cout << bt->data << " "; //先访问根节点
+		preOrder(bt->lchild);//前序递归bt的左子树
+		preOrder(bt->rchild);//前序遍历bt的右子树
 	}
+
 }
-
-
-//2.中序遍历
+//2.中序遍历(左子节点->父节点->右子节点)
 template <class T>
-void BiTree<T>::InfixOrder(BiNode<T>* bt) {
+void BiTree<T>::inOrder(BiNode<T>* bt) {
 	if (bt == NULL) {
-		return;
+		return;     //递归结束的条件
 	}
 	else {
-		InfixOrder(bt->lchild);
-		cout << bt->data << " ";
-		InfixOrder(bt->rchild);
+		inOrder(bt->lchild);//中序递归遍历左子树
+		cout << bt->data << " ";   //输出中间节点的数据
+		inOrder(bt->rchild);//中序递归遍历右子树
 	}
+
 }
 
 //3.后序遍历
-template <class T>
-void BiTree<T>::PostOrder(BiNode<T>* bt) {
+//后序遍历的顺序(左子节点->右子节点->中间节点)
+template<class T>
+void BiTree<T>::postOrder(BiNode<T>* bt) {
 	if (bt == NULL) {
-		return;
+		return;    //递归的结束条件
 	}
 	else {
-		PostOrder(bt->lchild);
-		PostOrder(bt->rchild);
-		cout << bt->data << " ";
+		postOrder(bt->lchild);//后序遍历左子树
+		postOrder(bt->rchild);//后序遍历右子树
+		cout << bt->data << " ";//输出中间节点的数据
 	}
 }
 
 //4.层序遍历
+//层序遍历按照顺序进行输出，采用队列先进先出
 template<class T>
-void BiTree<T>::LevelOrder(BiNode<T>* bt) {
-	queue<BiNode<T>*> q;//创建一个队列q;
-	BiNode<T>* front;
-	if (bt == NULL) {
+void BiTree<T>::LevelOrder() {
+	BiNode<T>* Q[20];
+	BiNode<T>* q;
+	int front = -1;
+	int rear = -1;
+	if (root == NULL) { //如果二叉树为空，那么则返回
 		return;
 	}
-	q.push(bt);
-	while (!q.empty()) {
-		front = q.front(); //从队列中取出第一个指针
-		q.pop();//出队
-		cout << front->data << " ";
-		if (front->lchild != NULL) {
-			q.push(front->lchild);
-		}
-		if (front->rchild != NULL) {
-			q.push(front->rchild);
-		}
+	Q[++rear] = root; //根指针入队
+	while (front != rear) {
+		q = Q[++front];   //出队
+		cout << q->data << " ";
+		if (q->lchild != NULL) Q[++rear] = q->lchild;
+		if (q->rchild != NULL) Q[++rear] = q->rchild;
 	}
 }

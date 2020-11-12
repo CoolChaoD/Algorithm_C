@@ -6,13 +6,13 @@ int main() {
 	BiTree<char>* bitree = new BiTree<char>;
 
 
-	cout << "前序遍历" << endl;
-	bitree->PreOrder();
-	cout << "中序遍历" << endl;
-	bitree->InfixOrder();
-	cout << "后序遍历" << endl;
-	bitree->PostOrder();
+	//cout << "前序遍历" << endl;
+	//bitree->PreOrder();
+	//cout << "中序遍历" << endl;
+	//bitree->InfixOrder();
+	//cout << "后序遍历" << endl;
+	//bitree->PostOrder();
 	cout << "层序遍历" << endl;
-	bitree->LevelOrder() << endl;
+	bitree->LevelOrder();
 	return 0;
 }
