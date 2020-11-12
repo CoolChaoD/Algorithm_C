@@ -51,8 +51,6 @@ private:
 	//3.ºóĞò±éÀú
 	void postOrder(BiNode<T>* bt);
 
-
-
 };
 
 
